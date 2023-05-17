@@ -1,7 +1,9 @@
 .logo {
-    width: 10rem;
-    position: absolute;
-    height: 2.1rem;
-    left: 7.5rem;
-    top: 3.44rem;
+    width: 5rem;
+    height: 1.12rem;
+    margin-left: 2rem;
+    margin-top: 1.44rem;
+}
+.header{
+    background: rgb(247 241, 255);
 }

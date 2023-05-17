@@ -1,0 +1,15 @@
+.video-container{
+    text-align: center;
+}
+
+h1{
+    font-size: 28px;
+    font-weight: 700;
+    color: var(--color-purple);
+    margin-bottom: 2.5rem;
+    margin-top: 4rem;
+}
+iframe{
+    width: 63%;
+    height: 50vh;
+}
