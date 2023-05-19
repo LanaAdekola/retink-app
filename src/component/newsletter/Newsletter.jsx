@@ -1,22 +1,44 @@
-import React from 'react'
+import React, { useState } from 'react'
 import './newsletter.css'
+import {auth} from "../../firebase"
+import { signInWithEmailAndPassword } from 'firebase/auth'
+import firebase from "firebase/app";
+import AuthDetails from './AuthDetails';
 
-const newsletter = () => {
+const Newsletter = () => {
+    const[email, setEmail] = useState('')
+    const[password, setPassword] = useState('')
+
+    const signIn = (e) => {
+        e.preventDefault();
+        signInWithEmailAndPassword (auth, email, password)
+        .then ((userCredential) =>{
+          console.log(userCredential);
+        }).catch((error) => {
+          console.log(error);
+        })
+    }
+
   return (
-    <div className='newsletter-wrapper'>
+    <form onSubmit={signIn} className='newsletter-wrapper'>
           <h4 className='sign-up-text sign-up'>Sign Up for The BETA to See More!</h4>
           <input 
-            type='text' 
+            type='password' 
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
             placeholder='Business Name'
             className='newsletter-input'/>     
           <input 
-            type='text' 
+            type='email' 
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
             placeholder='Email Address'
             className='newsletter-input' />
           <button className='normal-btn'>Notify Me</button>
-          <button className='sign-btn light-btn'><a>Sign Up as Freelance Partner</a></button>
-    </div>
+          <button type='submit' className='sign-btn light-btn'><a>Sign Up as Freelance Partner</a></button>
+          <AuthDetails />
+    </form>
   )
 }
 
-export default newsletter
+export default Newsletter
