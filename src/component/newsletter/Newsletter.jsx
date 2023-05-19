@@ -2,7 +2,6 @@ import React, { useState } from 'react'
 import './newsletter.css'
 import {auth} from "../../firebase"
 import { createUserWithEmailAndPassword } from 'firebase/auth'
-import firebase from "firebase/app";
 import AuthDetails from './AuthDetails';
 
 const Newsletter = () => {
@@ -20,7 +19,7 @@ const Newsletter = () => {
     }
 
   return (
-    <form onSubmit={signIn} className='newsletter-wrapper'>
+    <form className='newsletter-wrapper'>
           <h4 className='sign-up-text sign-up'>Sign Up for The BETA to See More!</h4>
           <input 
             type='password' 
@@ -34,8 +33,8 @@ const Newsletter = () => {
             onChange={(e) => setEmail(e.target.value)}
             placeholder='Email Address'
             className='newsletter-input' />
-          <button className='normal-btn'>Notify Me</button>
-          <button type='submit' className='sign-btn light-btn'><a>Sign Up as Freelance Partner</a></button>
+          <button type='submit' className='normal-btn'>Notify Me</button>
+          <button  onSubmit={signIn} type='submit' className='sign-btn light-btn'><a>Sign Up as Freelance Partner</a></button>
           <AuthDetails />
     </form>
   )
