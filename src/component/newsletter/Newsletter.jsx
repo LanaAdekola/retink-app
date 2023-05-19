@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import './newsletter.css'
 import {auth} from "../../firebase"
-import { signInWithEmailAndPassword } from 'firebase/auth'
+import { createUserWithEmailAndPassword } from 'firebase/auth'
 import firebase from "firebase/app";
 import AuthDetails from './AuthDetails';
 
@@ -11,7 +11,7 @@ const Newsletter = () => {
 
     const signIn = (e) => {
         e.preventDefault();
-        signInWithEmailAndPassword (auth, email, password)
+        createUserWithEmailAndPassword (auth, email, password)
         .then ((userCredential) =>{
           console.log(userCredential);
         }).catch((error) => {
