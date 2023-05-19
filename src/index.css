@@ -24,10 +24,34 @@ body {
   --color-light: #393939;
 
   
-  --container-width-lg: 75%;
+  --container-width-lg: 90%;
   --container-width-md: 86%;
   --container-width-sm: 90%;
 
-  --transition: all 400ms ease;
+  --transition: all 700ms ease;
 }
 
+.container {
+  width: var(--container-width-lg);
+  margin: auto;
+}
+.holder{
+  width: 100%;
+}
+button{
+  transition: var(--transition);
+
+}
+.light-btn:hover {
+    background: rgb(255, 218, 255);
+    color: var(--color-purple);
+    transform: scale(1.09);
+
+  }
+  .normal-btn:hover {
+    background: rgb(255, 218, 255);
+    color: var(--color-purple);
+    border-color: var(--color-purple-variant);
+    border: 1px solid ;
+    transform: scale(1.09);
+  }

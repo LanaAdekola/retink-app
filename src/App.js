@@ -6,22 +6,20 @@ import Content from './component/content/Content'
 import Details from './component/details/Details'
 import Services from './component/services/Services'
 import Newsletter from './component/newsletter/Newsletter'
-import Contact from './component/contact/Contact'
 import Footer from './component/footer/Footer'
 
 
 const App = () => {
   return (
-    <div>
+    <div className='holder'>
       <Header />
       <Info />
       <Video />
-      <Content />
       <Details />
+      <Content />
       <Services/>
       <Newsletter />
-      <Contact/>
-      <Footer/>
+       <Footer/>
     </div>
   )
 }

@@ -6,4 +6,50 @@
 }
 .header{
     background: rgb(247 241, 255);
+    display: flex;
+}
+.header-list-container{
+    display: flex;
+    gap: 5rem;
+}
+.english{
+    margin-top: 1.3rem;
+    position: absolute;
+    right: 90px
+    
+}
+.english:hover{
+    border: 2px solid;
+    padding: 0.2rem 0.5rem;
+}
+.menu-hamburger{
+    display: none;
+}
+.header-caps-text{
+    color: var(--color-primary);
+    font-weight: 700;
+    font-size: 1rem;
+}
+.section-header{
+    padding-top: 1.3rem;
+    display: flex;
+    gap: 2.5rem;
+
+}
+
+/* ============MEDIA QUERIES (Medium DEVICES)========== */
+@media screen and (max-width: 1024px){
+    .section-header{
+        display: none;
+    }
+    .english{
+        display: none;
+    }
+    .menu-hamburger{
+        font-size: 35px;
+        top: 15px;
+        position: absolute;
+        right: 20px;
+        display:inline
+    }
 }

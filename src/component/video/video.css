@@ -2,14 +2,34 @@
     text-align: center;
 }
 
-h1{
-    font-size: 28px;
+.video-text{
+    font-size: 1.28rem;
     font-weight: 700;
     color: var(--color-purple);
-    margin-bottom: 2.5rem;
-    margin-top: 4rem;
+    margin: 4rem auto 2.5rem;    
 }
 iframe{
     width: 63%;
     height: 50vh;
+    margin-bottom: 3rem;
+}
+
+/* ============MEDIA QUERIES (Medium DEVICES)========== */
+@media screen and (max-width: 1024px){
+    .video-text{
+        width: 70%;
+    }
+}
+/* ============MEDIA QUERIES (Medium DEVICES)========== */
+@media screen and (max-width: 1024px){
+    .video-text{
+        width: 90%;
+        margin: 4rem auto 2.5rem; 
+        font-size: 1.2rem;
+    }
+    iframe{
+        width: 70%;
+        height: 20vh;
+    }
+
 }

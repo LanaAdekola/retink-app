@@ -1,0 +1,32 @@
+.content-container{
+    text-align: center;
+    width: 70%;
+    margin: auto;
+    margin-top: 2.5rem;
+}
+.content-title{
+    margin-bottom: 1.3rem;
+    font-size: 1.75rem;
+    font-weight: 600;
+    color: var(--color-purple);
+    line-height: 120%;
+}
+.section-text{
+    font-weight: 400;
+    font-size: 1.25rem;
+    line-height: 1.5rem;
+    margin-bottom: 1.9rem;
+}
+
+/* ============MEDIA QUERIES (Medium DEVICES)========== */
+@media screen and (max-width: 1024px){
+    .content-container {
+        width: 90%;
+    }
+    .content-title{
+        font-size: 1.2rem;
+    }
+    .section-text{
+        font-size: 0.85rem;
+    }
+}

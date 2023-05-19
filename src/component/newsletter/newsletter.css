@@ -1,0 +1,33 @@
+.newsletter-wrapper{
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+.newsletter-input{
+    border: 1px solid #754DE8;
+    padding: 1.2rem 1.2rem;
+    width: 40%;
+    color: var(--color-purple);
+    margin-top: -10px;
+}
+
+.input-wrapper{
+    flex-direction: column;
+}
+.sign-up-text{
+    font-size: 1.8rem;
+}
+
+/* ============MEDIA QUERIES (Medium DEVICES)========== */
+@media screen and (max-width: 1024px){
+    .newsletter-input{
+        width: 60%;
+
+    }
+    .sign-up-text{
+        font-size: 1.32rem;
+        width: 65%;
+    }
+}
